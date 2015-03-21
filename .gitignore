@@ -22,6 +22,12 @@
 #*.deployproj
 #
 
+#by biol, SOLO in questo caso
+# ===========================
+*.gif
+*.zip
+*.stat
+
 # Delphi compiler-generated binaries (safe to delete)
 *.exe
 *.dll

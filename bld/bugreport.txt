@@ -1,0 +1,529 @@
+date/time          : 2015-03-21, 11:35:35, 514ms
+computer name      : WIN-62BP9L12KVA
+user name          : test
+registered owner   : Utente Windows
+operating system   : Windows 7 x64 Service Pack 1 build 7601
+system language    : Italian
+system up time     : 1 day 8 hours
+program up time    : 14 seconds
+processors         : 4x Intel(R) Core(TM) i7-3537U CPU @ 2.00GHz
+physical memory    : 2555/4095 MB (free/total)
+free disk space    : (C:) 18,80 GB
+display mode       : 1920x1080, 32 bit
+process id         : $234
+allocated memory   : 50,06 MB
+largest free block : 1,07 GB
+executable         : Scrb.exe
+exec. date/time    : 2015-03-21 11:35
+version            : 1.0.0.1
+compiled with      : Delphi XE7
+madExcept version  : 4.0.11
+callstack crc      : $2138925d, $49a00ede, $47a21311
+exception number   : 1
+exception class    : EAccessViolation
+exception message  : Access violation at address 006F7EF0 in module 'Scrb.exe'. Write of address 00000428.
+
+main thread ($44c):
+006f7ef0 +034 Scrb.exe     uOPCMain         346   +3 TMainOPCdlg.FormShow
+0068d525 +015 Scrb.exe     Vcl.Forms       4017   +1 TCustomForm.DoShow
+00691bf9 +0a9 Scrb.exe     Vcl.Forms       6694  +11 TCustomForm.CMShowingChanged
+005acd51 +2bd Scrb.exe     Vcl.Controls    7232  +91 TControl.WndProc
+005b181e +5ce Scrb.exe     Vcl.Controls   10038 +153 TWinControl.WndProc
+0068dfc0 +62c Scrb.exe     Vcl.Forms       4427 +206 TCustomForm.WndProc
+005ac98c +024 Scrb.exe     Vcl.Controls    7010  +10 TControl.Perform
+005b0c01 +10d Scrb.exe     Vcl.Controls    9673  +19 TWinControl.UpdateShowing
+005b0d10 +0bc Scrb.exe     Vcl.Controls    9708  +21 TWinControl.UpdateControlState
+005b38c2 +026 Scrb.exe     Vcl.Controls   11472   +3 TWinControl.CMVisibleChanged
+005acd51 +2bd Scrb.exe     Vcl.Controls    7232  +91 TControl.WndProc
+005b181e +5ce Scrb.exe     Vcl.Controls   10038 +153 TWinControl.WndProc
+0068dfc0 +62c Scrb.exe     Vcl.Forms       4427 +206 TCustomForm.WndProc
+0068f6a5 +391 Scrb.exe     Vcl.Forms       5239  +50 TCustomForm.SetWindowToMonitor
+005ac98c +024 Scrb.exe     Vcl.Controls    7010  +10 TControl.Perform
+005ab33e +026 Scrb.exe     Vcl.Controls    6039   +5 TControl.SetVisible
+0068d7fe +03a Scrb.exe     Vcl.Forms       4142   +8 TCustomForm.SetVisible
+006927ab +007 Scrb.exe     Vcl.Forms       7074   +1 TCustomForm.Show
+006fb696 +062 Scrb.exe     guiScrb           43   +3 TFormScrb.FormActivate
+0069095f +027 Scrb.exe     Vcl.Forms       5936   +2 TCustomForm.Activate
+00691a7c +010 Scrb.exe     Vcl.Forms       6633   +2 TCustomForm.CMActivate
+005acd51 +2bd Scrb.exe     Vcl.Controls    7232  +91 TControl.WndProc
+005b181e +5ce Scrb.exe     Vcl.Controls   10038 +153 TWinControl.WndProc
+0068dfc0 +62c Scrb.exe     Vcl.Forms       4427 +206 TCustomForm.WndProc
+005b0e58 +02c Scrb.exe     Vcl.Controls    9750   +3 TWinControl.MainWndProc
+0053f398 +014 Scrb.exe     System.Classes 16600   +8 StdWndProc
+759896c0 +047 USER32.dll                             SendMessageW
+0068ad40 +010 Scrb.exe     Vcl.Forms       2308   +2 SendFocusMessage
+00690594 +134 Scrb.exe     Vcl.Forms       5802  +31 TCustomForm.SetFocusedControl
+005b141d +1cd Scrb.exe     Vcl.Controls    9912  +27 TWinControl.WndProc
+005cec0c +06c Scrb.exe     Vcl.StdCtrls    5163  +13 TButtonControl.WndProc
+005b0e58 +02c Scrb.exe     Vcl.Controls    9750   +3 TWinControl.MainWndProc
+0053f398 +014 Scrb.exe     System.Classes 16600   +8 StdWndProc
+77ad0107 +02b ntdll.dll                              KiUserCallbackDispatcher
+75992183 +00e USER32.dll                             SetFocus
+00690751 +04d Scrb.exe     Vcl.Forms       5863  +10 TCustomForm.SetWindowFocus
+0069035a +08a Scrb.exe     Vcl.Forms       5724  +10 TCustomForm.SetActiveControl
+006907c7 +04b Scrb.exe     Vcl.Forms       5876   +7 TCustomForm.SetActive
+006912aa +03a Scrb.exe     Vcl.Forms       6261   +6 TCustomForm.WMActivate
+005acd51 +2bd Scrb.exe     Vcl.Controls    7232  +91 TControl.WndProc
+005b181e +5ce Scrb.exe     Vcl.Controls   10038 +153 TWinControl.WndProc
+0068dfc0 +62c Scrb.exe     Vcl.Forms       4427 +206 TCustomForm.WndProc
+005b0e58 +02c Scrb.exe     Vcl.Controls    9750   +3 TWinControl.MainWndProc
+0053f398 +014 Scrb.exe     System.Classes 16600   +8 StdWndProc
+77ad0107 +02b ntdll.dll                              KiUserCallbackDispatcher
+005acd51 +2bd Scrb.exe     Vcl.Controls    7232  +91 TControl.WndProc
+005b181e +5ce Scrb.exe     Vcl.Controls   10038 +153 TWinControl.WndProc
+0068dfc0 +62c Scrb.exe     Vcl.Forms       4427 +206 TCustomForm.WndProc
+005ac98c +024 Scrb.exe     Vcl.Controls    7010  +10 TControl.Perform
+005b0c01 +10d Scrb.exe     Vcl.Controls    9673  +19 TWinControl.UpdateShowing
+005b0d10 +0bc Scrb.exe     Vcl.Controls    9708  +21 TWinControl.UpdateControlState
+005b38c2 +026 Scrb.exe     Vcl.Controls   11472   +3 TWinControl.CMVisibleChanged
+005acd51 +2bd Scrb.exe     Vcl.Controls    7232  +91 TControl.WndProc
+005b181e +5ce Scrb.exe     Vcl.Controls   10038 +153 TWinControl.WndProc
+0068dfc0 +62c Scrb.exe     Vcl.Forms       4427 +206 TCustomForm.WndProc
+005ac98c +024 Scrb.exe     Vcl.Controls    7010  +10 TControl.Perform
+005ab33e +026 Scrb.exe     Vcl.Controls    6039   +5 TControl.SetVisible
+0068d7fe +03a Scrb.exe     Vcl.Forms       4142   +8 TCustomForm.SetVisible
+006977e3 +0b3 Scrb.exe     Vcl.Forms      10517  +23 TApplication.Run
+00705ead +061 Scrb.exe     Scrb              22   +5 initialization
+772d3388 +010 kernel32.dll                           BaseThreadInitThunk
+
+thread $a84:
+77ae0156 +0e ntdll.dll     NtWaitForMultipleObjects
+772d3388 +10 kernel32.dll  BaseThreadInitThunk
+
+thread $9dc:
+77ae1f3f +0b ntdll.dll     NtWaitForWorkViaWorkerFactory
+772d3388 +10 kernel32.dll  BaseThreadInitThunk
+
+thread $350 (TdOPCMsgThread):
+77ae0156 +0e ntdll.dll                                NtWaitForMultipleObjects
+776515f1 +fa KERNELBASE.dll                           WaitForMultipleObjectsEx
+772d19f3 +89 kernel32.dll                             WaitForMultipleObjectsEx
+0059885a +56 Scrb.exe       System.SyncObjs   713 +13 THandleObject.WaitFor
+006b85e7 +9f Scrb.exe       dOPCComn                  TdOPCMsgThread.Execute
+004a9f6b +2b Scrb.exe       madExcept                 HookedTThreadExecute
+0053bc61 +49 Scrb.exe       System.Classes  14161 +21 ThreadProc
+00409da8 +28 Scrb.exe       System          23677 +45 ThreadWrapper
+004a9e51 +0d Scrb.exe       madExcept                 CallThreadProcSafe
+004a9eb6 +32 Scrb.exe       madExcept                 ThreadExceptFrame
+772d3388 +10 kernel32.dll                             BaseThreadInitThunk
+>> created by main thread ($44c) at:
+006b84db +2b Scrb.exe       dOPCComn                  TdOPCMsgThread.Create
+
+thread $9b8 (TdOPCMsgThread):
+77ae0156 +0e ntdll.dll                                NtWaitForMultipleObjects
+776515f1 +fa KERNELBASE.dll                           WaitForMultipleObjectsEx
+772d19f3 +89 kernel32.dll                             WaitForMultipleObjectsEx
+0059885a +56 Scrb.exe       System.SyncObjs   713 +13 THandleObject.WaitFor
+006b85e7 +9f Scrb.exe       dOPCComn                  TdOPCMsgThread.Execute
+004a9f6b +2b Scrb.exe       madExcept                 HookedTThreadExecute
+0053bc61 +49 Scrb.exe       System.Classes  14161 +21 ThreadProc
+00409da8 +28 Scrb.exe       System          23677 +45 ThreadWrapper
+004a9e51 +0d Scrb.exe       madExcept                 CallThreadProcSafe
+004a9eb6 +32 Scrb.exe       madExcept                 ThreadExceptFrame
+772d3388 +10 kernel32.dll                             BaseThreadInitThunk
+>> created by main thread ($44c) at:
+006b84db +2b Scrb.exe       dOPCComn                  TdOPCMsgThread.Create
+
+thread $a9c:
+77ae1f3f +0b ntdll.dll     NtWaitForWorkViaWorkerFactory
+772d3388 +10 kernel32.dll  BaseThreadInitThunk
+
+thread $f9c:
+77ae1f3f +0b ntdll.dll     NtWaitForWorkViaWorkerFactory
+772d3388 +10 kernel32.dll  BaseThreadInitThunk
+
+modules:
+00400000 Scrb.exe                                 1.0.0.1            C:\dev\alumaster\scrb\bld
+05e30000 msxml6.dll                               6.30.7601.18431    C:\Windows\System32
+6ca70000 FaultRep.dll                             6.1.7601.17514     C:\Windows\system32
+72c50000 avcuf32.dll                              3.11.10263.5557    C:\Program Files\Bitdefender\Antivirus Free Edition\avc3\avc3_sig_298
+72f20000 ntmarta.dll                              6.1.7600.16385     C:\Windows\system32
+73d30000 mpr.dll                                  6.1.7600.16385     C:\Windows\system32
+73d50000 version.dll                              6.1.7600.16385     C:\Windows\system32
+73f00000 propsys.dll                              7.0.7601.17514     C:\Windows\system32
+743b0000 WINSTA.dll                               6.1.7601.18540     C:\Windows\system32
+743e0000 wtsapi32.dll                             6.1.7601.17514     C:\Windows\system32
+743f0000 uxtheme.dll                              6.1.7600.16385     C:\Windows\system32
+744a0000 winspool.drv                             6.1.7601.17514     C:\Windows\system32
+74560000 comctl32.dll                             6.10.7601.17514    C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2
+74740000 dwmapi.dll                               6.1.7600.16385     C:\Windows\system32
+74ce0000 wsock32.dll                              6.1.7600.16385     C:\Windows\system32
+75440000 CRYPTBASE.dll                            6.1.7600.16385     C:\Windows\syswow64
+75450000 SspiCli.dll                              6.1.7601.18719     C:\Windows\syswow64
+754b0000 USP10.dll                                1.626.7601.18454   C:\Windows\syswow64
+75550000 WLDAP32.dll                              6.1.7601.17514     C:\Windows\syswow64
+755a0000 api-ms-win-downlevel-normaliz-l1-1-0.dll 6.2.9200.16492     C:\Windows\syswow64
+755b0000 MSCTF.dll                                6.1.7600.16385     C:\Windows\syswow64
+75680000 api-ms-win-downlevel-advapi32-l1-1-0.dll 6.2.9200.16492     C:\Windows\syswow64
+75690000 WS2_32.dll                               6.1.7601.17514     C:\Windows\syswow64
+756d0000 api-ms-win-downlevel-version-l1-1-0.dll  6.2.9200.16492     C:\Windows\syswow64
+756e0000 oleaut32.dll                             6.1.7601.18679     C:\Windows\syswow64
+75770000 USERENV.dll                              6.1.7601.17514     C:\Windows\syswow64
+758e0000 CLBCatQ.DLL                              2001.12.8530.16385 C:\Windows\syswow64
+75970000 USER32.dll                               6.1.7601.17514     C:\Windows\syswow64
+75a70000 msvcrt.dll                               7.0.7601.17744     C:\Windows\syswow64
+75b20000 ADVAPI32.dll                             6.1.7601.18247     C:\Windows\syswow64
+75bc0000 api-ms-win-downlevel-shlwapi-l1-1-0.dll  6.2.9200.16492     C:\Windows\syswow64
+75be0000 SETUPAPI.dll                             6.1.7601.17514     C:\Windows\syswow64
+75d80000 shell32.dll                              6.1.7601.18517     C:\Windows\syswow64
+769d0000 comdlg32.dll                             6.1.7601.17514     C:\Windows\syswow64
+76a50000 ole32.dll                                6.1.7601.17514     C:\Windows\syswow64
+76bb0000 GDI32.dll                                6.1.7601.18577     C:\Windows\syswow64
+76d70000 api-ms-win-downlevel-user32-l1-1-0.dll   6.2.9200.16492     C:\Windows\syswow64
+76d80000 profapi.dll                              6.1.7600.16385     C:\Windows\syswow64
+76da0000 sechost.dll                              6.1.7600.16385     C:\Windows\SysWOW64
+76dc0000 RPCRT4.dll                               6.1.7601.18532     C:\Windows\syswow64
+76eb0000 LPK.dll                                  6.1.7601.18177     C:\Windows\syswow64
+76fc0000 DEVOBJ.dll                               6.1.7601.17621     C:\Windows\syswow64
+76fe0000 iertutil.dll                             11.0.9600.17631    C:\Windows\syswow64
+77220000 normaliz.DLL                             6.1.7600.16385     C:\Windows\syswow64
+77230000 IMM32.DLL                                6.1.7601.17514     C:\Windows\system32
+77290000 CFGMGR32.dll                             6.1.7601.17621     C:\Windows\syswow64
+772c0000 kernel32.dll                             6.1.7601.18409     C:\Windows\syswow64
+773d0000 SHLWAPI.dll                              6.1.7601.17514     C:\Windows\syswow64
+77460000 wininet.dll                              11.0.9600.17631    C:\Windows\syswow64
+77640000 KERNELBASE.dll                           6.1.7601.18409     C:\Windows\syswow64
+77a90000 NSI.dll                                  6.1.7600.16385     C:\Windows\syswow64
+77ac0000 ntdll.dll                                6.1.7601.18247     C:\Windows\SysWOW64
+
+processes:
+000 Idle              0 0    0
+004 System            0 0    0
+130 smss.exe          0 0    0
+1c4 csrss.exe         0 0    0
+1f8 csrss.exe         1 0    0
+200 wininit.exe       0 0    0
+224 winlogon.exe      1 0    0
+260 services.exe      0 0    0
+268 lsass.exe         0 0    0
+270 lsm.exe           0 0    0
+2cc svchost.exe       0 0    0
+30c gzserv.exe        0 0    0
+358 svchost.exe       0 0    0
+3b0 svchost.exe       0 0    0
+3e0 svchost.exe       0 0    0
+3fc svchost.exe       0 0    0
+148 svchost.exe       0 0    0
+2ac svchost.exe       0 0    0
+470 svchost.exe       0 0    0
+4fc spoolsv.exe       0 0    0
+528 svchost.exe       0 0    0
+5a0 armsvc.exe        0 0    0
+658 fbguard.exe       0 0    0
+67c ibguard.exe       0 0    0
+6b0 svchost.exe       0 0    0
+6e8 vmtoolsd.exe      0 0    0
+7b4 taskhost.exe      1 28   22  normal
+7cc gziface.exe       1 57   51  normal
+4d4 dwm.exe           1 17   2   high
+5c4 explorer.exe      1 609  374 normal
+90c ibserver.exe      0 0    0
+b5c fbserver.exe      0 0    0
+b88 vmtoolsd.exe      1 85   26  normal
+bec svchost.exe       0 0    0
+914 TPAutoConnSvc.exe 0 0    0
+a40 TPAutoConnect.exe 1 14   8   normal
+aa4 dllhost.exe       0 0    0
+b0c SearchIndexer.exe 0 0    0
+c04 conhost.exe       1 20   1   normal
+c60 msdtc.exe         0 0    0
+ce8 wmpnetwk.exe      0 0    0
+e08 svchost.exe       0 0    0
+8d0 wuauclt.exe       1 12   6   normal
+c5c bds.exe           1 2916 857 normal C:\Program Files (x86)\Embarcadero\Studio\15.0\bin
+ec8 GitHub.exe        1 65   33  normal C:\Users\test\AppData\Local\Apps\2.0\GE2YKE0Y.M08\ZNXHWDJJ.HWJ\gith..tion_317444273a93ac29_0002.0009_778ac386a145d514
+bd8 sublime_text.exe  1 93   101 normal
+e60 plugin_host.exe   1 4    1   normal
+170 ssh-agent.exe     1 4    1   normal C:\Users\test\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\bin
+978 IBOConsole.exe    1 169  112 normal C:\Program Files (x86)\Firebird\Firebird_2_5\bin
+234 Scrb.exe          1 71   60  normal C:\dev\alumaster\scrb\bld
+fb0 audiodg.exe       0 0    0
+
+hardware:
++ Batteries
+  - Batteria composita Microsoft
+  - Scheda AC Microsoft
++ Computer
+  - ACPI x64-based PC
++ Disk drives
+  - VMware, VMware Virtual S SCSI Disk Device
++ Display adapters
+  - VMware SVGA 3D (driver 7.14.1.5026)
++ DVD/CD-ROM drives
+  - NECVMWar VMware SATA CD01 ATA Device
++ Floppy disk drives
+  - Unità disco floppy
++ Floppy drive controllers
+  - Controller disco floppy standard
++ Human Interface Devices
+  - Dispositivo di input USB
+  - Dispositivo di input USB
++ IDE ATA/ATAPI controllers
+  - ATA Channel 0
+  - ATA Channel 0
+  - ATA Channel 1
+  - ATA Channel 1
+  - ATA Channel 10
+  - ATA Channel 11
+  - ATA Channel 12
+  - ATA Channel 13
+  - ATA Channel 14
+  - ATA Channel 15
+  - ATA Channel 16
+  - ATA Channel 17
+  - ATA Channel 18
+  - ATA Channel 19
+  - ATA Channel 2
+  - ATA Channel 20
+  - ATA Channel 21
+  - ATA Channel 22
+  - ATA Channel 23
+  - ATA Channel 24
+  - ATA Channel 25
+  - ATA Channel 26
+  - ATA Channel 27
+  - ATA Channel 28
+  - ATA Channel 29
+  - ATA Channel 3
+  - ATA Channel 4
+  - ATA Channel 5
+  - ATA Channel 6
+  - ATA Channel 7
+  - ATA Channel 8
+  - ATA Channel 9
+  - Controller ATA seriale standard AHCI 1.0
+  - Controller IDE Intel(R) 82371AB/EB PCI Bus Master
++ Keyboards
+  - Tastiera PS/2 standard
++ Memory devices
+  - Modulo di memoria
+  - Modulo di memoria
++ Mice and other pointing devices
+  - VMware Pointing Device (driver 12.5.2.0)
+  - VMware USB Pointing Device (driver 12.5.2.0)
+  - VMware USB Pointing Device (driver 12.5.2.0)
++ Monitors
+  - Monitor generico non Plug and Play
+  - Monitor generico non Plug and Play
++ Network adapters
+  - Connessione di rete Intel(R) PRO/1000 MT
+  - Microsoft ISATAP Adapter
+  - Microsoft ISATAP Adapter #2
+  - Miniport WAN (PPPOE)
+  - Teredo Tunneling Pseudo-Interface
+  - WAN Miniport (IKEv2)
+  - WAN Miniport (IP)
+  - WAN Miniport (IPv6)
+  - WAN Miniport (L2TP)
+  - WAN Miniport (Network Monitor)
+  - WAN Miniport (PPTP)
+  - WAN Miniport (SSTP)
++ Ports (COM & LPT)
+  - Porta di comunicazione (COM1)
+  - Porta di comunicazione (COM2)
+  - Porta stampante (LPT1)
++ Processors
+  - Intel(R) Core(TM) i7-3537U CPU @ 2.00GHz
+  - Intel(R) Core(TM) i7-3537U CPU @ 2.00GHz
+  - Intel(R) Core(TM) i7-3537U CPU @ 2.00GHz
+  - Intel(R) Core(TM) i7-3537U CPU @ 2.00GHz
++ Sound, video and game controllers
+  - Dispositivo High Definition Audio
++ Storage controllers
+  - Scheda LSI, serie SAS 3000, 8 porte con 1068 (driver 1.28.3.52)
++ Storage volume shadow copies
+  - Copia shadow volume generico
+  - Copia shadow volume generico
+  - Copia shadow volume generico
++ System devices
+  - Adattatore Intel 82371AB/EB da PCI a ISA (modalità ISA)
+  - Adattatore Intel 82443BX Pentium(R) II da processore a PCI
+  - Adattatore PCI standard da PCI a PCI
+  - Adattatore PCI standard da PCI a PCI
+  - Altoparlante di sistema
+  - Archiviazione volumi
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus generico
+  - Bus PCI
+  - Controller di accesso diretto alla memoria (DMA)
+  - Controller di interrupt programmabile EISA
+  - Controller per High Definition Audio
+  - Driver BIOS Microsoft System Management
+  - Driver enumeratore unità virtuale Microsoft
+  - Driver file come volume
+  - Driver mouse di Terminal Server
+  - Driver tastiera di Terminal Server
+  - Enumeratore bus composito
+  - Enumeratore bus radice UMBus
+  - Enumeratore di dispositivi software Plug and Play
+  - Enumeratore UMBus
+  - Interfaccia logica porta stampante
+  - Orologio di sistema CMOS a tempo reale
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Porta radice standard PCI Express
+  - Pulsante caratteristica ACPI fissa
+  - Remote Desktop Device Redirector Bus
+  - Risorse scheda madre
+  - Risorse scheda madre
+  - Sistema compatibile ACPI Microsoft
+  - Timer di sistema
+  - Timer eventi alta precisione
+  - VMware VMCI Bus Device (driver 9.5.10.0)
+  - VMware VMCI Host Device (driver 9.5.10.0)
++ Universal Serial Bus controllers
+  - Controller host standard avanzato da PCI a USB
+  - Controller Standard Universal Host da PCI a USB
+  - Dispositivo USB composito
+  - Generic USB Hub
+  - Hub radice USB
+  - Hub radice USB
+
+cpu registers:
+eax = 00000000
+ebx = 02e655d0
+ecx = 00000000
+edx = 02e3f4c0
+esi = 0068d510
+edi = 02e655d0
+eip = 006f7ef0
+esp = 0018ec78
+ebp = 0018ec80
+
+stack dump:
+0018ec78  d0 55 e6 02 d0 55 e6 02 - d8 ec 18 00 2b d5 68 00  .U...U......+.h.
+0018ec88  88 ee 18 00 fe 1b 69 00 - 9c ec 18 00 64 92 40 00  ......i.....d.@.
+0018ec98  d8 ec 18 00 a8 ec 18 00 - 95 21 69 00 d8 ec 18 00  .........!i.....
+0018eca8  a4 ee 18 00 b2 21 69 00 - d8 ec 18 00 d0 55 e6 02  .....!i......U..
+0018ecb8  d0 55 e6 02 88 ee 18 00 - 00 00 00 00 00 00 00 00  .U..............
+0018ecc8  48 00 00 00 d0 55 e6 02 - 60 85 40 00 d0 55 e6 02  H....U..`.@..U..
+0018ecd8  04 ee 18 00 54 cd 5a 00 - d0 55 e6 02 02 00 00 00  ....T.Z..U......
+0018ece8  88 ee 18 00 54 cd 5a 00 - d0 55 e6 02 03 00 00 00  ....T.Z..U......
+0018ecf8  b0 5d e3 02 87 0f 28 00 - 00 00 00 00 00 00 00 00  .]....(.........
+0018ed08  00 00 00 00 88 ed 18 00 - 20 ed 18 00 3c ed 18 00  ........ ...<...
+0018ed18  30 02 9f 75 7a 71 98 75 - 88 ed 18 00 91 6d 98 75  0..uzq.u.....m.u
+0018ed28  51 6d 98 75 a8 6e d2 42 - 00 00 00 00 2a 04 10 00  Qm.u.n.B....*...
+0018ed38  90 00 e9 02 24 00 00 00 - 01 00 00 00 00 00 00 00  ....$...........
+0018ed48  00 00 00 00 70 00 00 00 - ff ff ff ff ff ff ff ff  ....p...........
+0018ed58  e9 6c 98 75 91 6d 98 75 - 00 00 00 00 01 00 00 00  .l.u.m.u........
+0018ed68  00 00 00 00 00 00 00 00 - 2c ed 18 00 0f 05 5b 00  ........,.....[.
+0018ed78  d4 ed 18 00 1e a6 9e 75 - 78 ee 52 37 fe ff ff ff  .......ux.R7....
+0018ed88  51 6d 98 75 e8 6d 98 75 - 00 00 00 00 87 0f 28 00  Qm.u.m.u......(.
+0018ed98  2a 04 10 00 46 00 00 00 - 00 00 00 00 44 ee 18 00  *...F.......D...
+0018eda8  98 d0 95 01 f3 6d 98 75 - c4 6e d2 42 d0 55 e6 02  .....m.u.n.B.U..
+
+disassembling:
+[...]
+006f7edb       call    -$14ca90 ($5ab450)     ; Vcl.Controls.TControl.SetText
+006f7ee0 346   mov     eax, [$70f1a4]
+006f7ee5       mov     eax, [eax]
+006f7ee7       mov     edx, [ebp-4]
+006f7eea       mov     edx, [edx+$3e8]
+006f7ef0     > mov     [eax+$428], edx
+006f7ef6 347   mov     eax, [$70f1a4]
+006f7efb       mov     eax, [eax]
+006f7efd       mov     edx, [ebp-4]
+006f7f00       mov     edx, [edx+$3e4]
+006f7f06       call    -$b0f ($6f73fc)        ; uOPCMain.DockForm
+[...]
+

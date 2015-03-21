@@ -1,0 +1,20 @@
+<opcSimu                  plantName="erdoganlar purification"  
+      KW_serverName="id"
+            KW_step="size"
+            KW_name="dscr"
+          KW_itemID="id"  
+       KW_preItemID="id"
+  >
+  <server id="AcmeSentrolServer3" separator="" >
+
+    <group id="[Main]" dscr="B.Position"   ><item id="Main_Bar[%d].Posizione"    low="1" count="30" caption="Position" /></group>
+    <group id="[Main]" dscr="B.Recipe"     ><item id="Main_Bar[%d].Ricetta"      low="1" count="30" caption="Recipe"   /></group>
+    <group id="[Main]" dscr="B.BaDT"       ><item id="Main_Bar[%d].BarToTreat"   low="1" count="30" caption="BaDT"        isBool="1" /></group>
+    <group id="[Main]" dscr="B.empty"      ><item id="Main_Bar[%d].Empty"        low="1" count="30" caption="Empty"       isBool="1" /></group>
+    <group id="[Main]" dscr="B.Available"  ><item id="Main_Bar[%d].Enabled"      low="1" count="30" caption="Available"   isBool="1" /></group>
+    <group id="[Main]" dscr="B.InTreatment"><item id="Main_Bar[%d].ToTreat"      low="1" count="30" caption="inTreatment" isBool="1" /></group>
+    <group id="[Main]" dscr="B.RecipeSecs" ><item id="Main_Bar[%d].SecTratt"     low="1" count="30" caption="Seconds (recipe)" isDouble="1" /></group>
+    <group id="[Main]" dscr="B.TankSecs"   ><item id="Main_Bar[%d].SecPerm"      low="1" count="30" caption="Seconds (tank)"   isDouble="1" /></group>
+
+  </server>
+</opcSimu>    
