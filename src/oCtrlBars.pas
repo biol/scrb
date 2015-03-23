@@ -26,30 +26,47 @@ type
     procedure step;
   end;
 
-implementation
+implementation uses System.SysUtils;
 
+const
+  K_Crane_bias = 2000;
 
 
 { TCtrolBar }
 
 procedure TCtrolBar.boot;
-begin { l'ultimo record ... la posizione è la stessa? allora ripartiamo da lì, altrimenti:
-  se adesso è sul carro ... niente, aspettiamo che atterri, altrimenti nuovo record
+begin { se la barra è in volo aspettiamo che atterri: NON deve scattare la isPositionChanged nel prossimo step
+  ELSE: l'ultimo record ... se la posizione non combacia inserire ASAP, facendo scattare la isPositionChanged
 }
-
+  if _OpcBar.position > K_Crane_bias then begin   // barra in volo
+    _OpcBar.cachePosition := _OpcBar.position // NON deve scattare la isPositionChanged
+  end else { barra in vasca } if (_ScrbBar._ID <= 0) or (_OpcBar.position <> _ScrbBar._POSITION_ID) then begin
+    // record assente in Scriba oppure posizione NON coincidente: va creato il NUOVO record ASAP
+    _OpcBar.cachePosition := -1   // far scattare la positionChanged
+  end;
 end;
 
 procedure TCtrolBar.step;
-const
-  K_Crane_bias = 2000;
 begin
   if _OpcBar.isPositionChanged then begin
     if _OpcBar.Position > K_Crane_bias then begin
-      // barra in volo: chiudere il record su scriba con il tempo di prelievo
+      // barra in volo: chiudere il record su scriba con il tempo di prelievo e i dati in cache
+      _ScrbBar.selectMostRecent;
+      _ScrbBar._JOB_ID      := _ScrbBar.getJobIDByLegacyLOG; // andare a recuperarlo solo ADESSO (è in un altro database!)
+      _ScrbBar._RECIPE_ID   := _OpcBar.cacheRecipe;
+      _ScrbBar._RECIPE_SECS := _OpcBar.cacheRecipeSecs;  // toDo: recuperare il dato dalle recipes? No! E se è stato alterato a mano?
+      _ScrbBar._TANK_SECS   := _OpcBar.cacheTankSecs;
+      _ScrbBar._FLAGS       := _OpcBar.getCacheFlags;
+      _ScrbBar._PICKUP_TIME := now();
+      _ScrbBar.update;
     end else begin
-      // barra atterrata: creare nuovo record
+      // barra atterrata: creare nuovo record ignorando TUTTI gli altri dati: solo posizione e tempo di deposito
+      _ScrbBar.clearAlmostAll;
+      _ScrbBar._POSITION_ID := _OpcBar.Position;
+      _ScrbBar.insert;
     end;
   end;
+  _OpcBar.updateCache;   // in ogni caso alla fine metto da parte i dati più recenti dell'OPC
 end;
 
 { TCtrolBars }

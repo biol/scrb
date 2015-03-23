@@ -2,7 +2,7 @@ object dbScrb: TdbScrb
   OldCreateOrder = False
   Height = 321
   Width = 572
-  object cnx: TFDConnection
+  object cnxScriba: TFDConnection
     Params.Strings = (
       'Database=C:\gdb\SCRB.GDB'
       'User_Name=SYSDBA'
@@ -11,21 +11,21 @@ object dbScrb: TdbScrb
       'DriverID=FB')
     Connected = True
     LoginPrompt = False
-    BeforeConnect = cnxBeforeConnect
-    Left = 320
-    Top = 64
+    BeforeConnect = cnxScribaBeforeConnect
+    Left = 152
+    Top = 32
   end
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 368
-    Top = 104
+    Left = 240
+    Top = 16
   end
   object FDPhysFBDriverLink1: TFDPhysFBDriverLink
-    Left = 400
-    Top = 152
+    Left = 304
+    Top = 32
   end
   object qryLastScribaOfBar: TFDQuery
-    Connection = cnx
+    Connection = cnxScriba
     SQL.Strings = (
       'select first 1 * from SCRIBA'
       'where BAR_ID = :BAR_ID'
@@ -41,7 +41,7 @@ object dbScrb: TdbScrb
       end>
   end
   object qryInsertScriba: TFDQuery
-    Connection = cnx
+    Connection = cnxScriba
     SQL.Strings = (
       'insert into "SCRIBA"'
       '('
@@ -51,7 +51,6 @@ object dbScrb: TdbScrb
       ', "RECIPE_ID"'
       ', "POSITION_ID"'
       ', "DROP_TIME"'
-      ', "PICKUP_TIME"'
       ', "RECIPE_SECS"'
       ', "TANK_SECS"'
       ', "FLAGS"'
@@ -64,7 +63,6 @@ object dbScrb: TdbScrb
       ', :"RECIPE_ID"'
       ', :"POSITION_ID"'
       ', :"DROP_TIME"'
-      ', :"PICKUP_TIME"'
       ', :"RECIPE_SECS"'
       ', :"TANK_SECS"'
       ', :"FLAGS"'
@@ -115,13 +113,6 @@ object dbScrb: TdbScrb
         Value = Null
       end
       item
-        Name = 'PICKUP_TIME'
-        IsCaseSensitive = True
-        DataType = ftDateTime
-        ParamType = ptInput
-        Value = Null
-      end
-      item
         Name = 'RECIPE_SECS'
         IsCaseSensitive = True
         DataType = ftInteger
@@ -144,11 +135,11 @@ object dbScrb: TdbScrb
       end>
   end
   object qryUpdateScriba: TFDQuery
-    Connection = cnx
+    Connection = cnxScriba
     SQL.Strings = (
       'update "SCRIBA"'
       'set'
-      ', "BAR_ID" = :"BAR_ID"'
+      '  "BAR_ID" = :"BAR_ID"'
       ', "JOB_ID" = :"JOB_ID"'
       ', "RECIPE_ID" = :"RECIPE_ID"'
       ', "POSITION_ID" = :"POSITION_ID"'
@@ -231,6 +222,58 @@ object dbScrb: TdbScrb
         DataType = ftInteger
         ParamType = ptInput
         Value = Null
+      end>
+  end
+  object qrySelectScribaByDropTime: TFDQuery
+    Connection = cnxScriba
+    SQL.Strings = (
+      'select * from SCRIBA'
+      'where (DROP_TIME >= :FROM_DROP_TIME)'
+      'and   (DROP_TIME <  :TO_DROP_TIME)'
+      'order by ID')
+    Left = 96
+    Top = 104
+    ParamData = <
+      item
+        Name = 'FROM_DROP_TIME'
+        DataType = ftDateTime
+        ParamType = ptInput
+        Value = 42086.75d
+      end
+      item
+        Name = 'TO_DROP_TIME'
+        DataType = ftDateTime
+        ParamType = ptInput
+        Value = 42086.8125d
+      end>
+  end
+  object cnxLOG: TFDConnection
+    Params.Strings = (
+      'Database=C:\gdb\GrupaKety_LOG.GDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'CharacterSet=UTF8'
+      'DriverID=FB')
+    Connected = True
+    LoginPrompt = False
+    BeforeConnect = cnxLOGBeforeConnect
+    Left = 456
+    Top = 32
+  end
+  object qryLastJobOfBar: TFDQuery
+    Connection = cnxLOG
+    SQL.Strings = (
+      'select first 1 * from LOGJOB1'
+      'where IDBARRA= :BAR_ID'
+      'order by IDJOB desc')
+    Left = 456
+    Top = 96
+    ParamData = <
+      item
+        Name = 'BAR_ID'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = 123
       end>
   end
 end

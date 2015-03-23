@@ -14,14 +14,14 @@ type
   , _InTreatment
   , _RecipeSecs
   , _TankSecs: TdOPCItem;
-    iPosition
-  , iRecipe
-  , iRecipeSecs
-  , iTankSecs: integer;
-    bBaDT
-  , bempty
-  , bAvailable
-  , bInTreatment: boolean;
+    cachePosition
+  , cacheRecipe
+  , cacheRecipeSecs
+  , cacheTankSecs: integer;
+    cacheBaDT
+  , cacheEmpty
+  , cacheAvailable
+  , cacheInTreatment: boolean;
     class function new(  pPosition
                        , pRecipe
                        , pBaDT
@@ -34,7 +34,7 @@ type
     function position: integer;
     function isPositionChanged: boolean;
     function isFlagsChanged: boolean;
-    procedure updateLocalCache;
+    procedure updateCache;
     function getFlags: integer;
     function getCacheFlags: integer;
   end;
@@ -50,10 +50,10 @@ var
 , lAvailable
 , lInTreatment: integer;
 begin
-  if bAvailable   then lAvailable   := 1 else lAvailable   := 0;
-  if bempty       then lEmpty       := 1 else lEmpty       := 0;
-  if bBaDT        then lBaDT        := 1 else lBaDT        := 0;
-  if bInTreatment then lInTreatment := 1 else lInTreatment := 0;
+  if cacheAvailable   then lAvailable   := 1 else lAvailable   := 0;
+  if cacheEmpty       then lEmpty       := 1 else lEmpty       := 0;
+  if cacheBaDT        then lBaDT        := 1 else lBaDT        := 0;
+  if cacheInTreatment then lInTreatment := 1 else lInTreatment := 0;
   result := lAvailable OR (lEmpty shl 1) OR (lBaDT shl 2) OR (lInTreatment shl 3);
 end;
 
@@ -78,7 +78,7 @@ end;
 
 function TOpcBar.isPositionChanged: boolean;
 begin
-  result := iPosition <> _Position.value;
+  result := cachePosition <> _Position.value;
 end;
 
 class function TOpcBar.new(pPosition, pRecipe, pBaDT, pEmpty, pAvailable, pInTreatment, pRecipeSecs, pTankSecs: TdOPCItem): TOpcBar;
@@ -99,16 +99,16 @@ begin
   result := _Position.value;
 end;
 
-procedure TOpcBar.updateLocalCache;
+procedure TOpcBar.updateCache;
 begin
-  iPosition    := _Position   .value;
-  iRecipe      := _Recipe     .value;
-  iRecipeSecs  := _RecipeSecs .value;
-  iTankSecs    := _TankSecs   .value;
-  bBaDT        := _BaDT       .value;
-  bEmpty       := _Empty      .value;
-  bAvailable   := _Available  .value;
-  bInTreatment := _InTreatment.value;
+  cachePosition    := _Position   .value;
+  cacheRecipe      := _Recipe     .value;
+  cacheRecipeSecs  := _RecipeSecs .value;
+  cacheTankSecs    := _TankSecs   .value;
+  cacheBaDT        := _BaDT       .value;
+  cacheEmpty       := _Empty      .value;
+  cacheAvailable   := _Available  .value;
+  cacheInTreatment := _InTreatment.value;
 end;
 
 end.
