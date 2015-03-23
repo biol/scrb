@@ -26,7 +26,7 @@ object FormScrb: TFormScrb
       478
       41)
     object lblRel: TLabel
-      Left = 416
+      Left = 428
       Top = 14
       Width = 25
       Height = 13
@@ -56,7 +56,7 @@ object FormScrb: TFormScrb
   end
   object tmrStep: TTimer
     OnTimer = tmrStepTimer
-    Left = 432
-    Top = 56
+    Left = 8
+    Top = 48
   end
 end
